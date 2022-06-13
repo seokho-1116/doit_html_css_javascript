@@ -20,6 +20,13 @@
 <body>
   <p>현재 시각 <span id="current" class="display"></span></p>
   <script>
+    setInterval(displayNow, 1000);
+
+    function displayNow() {
+      var currentDate = new Date();
+      currentTime = currentDate.toLocaleTimeString();
+      document.querySelector("#current").innerHTML = currentTime;
+    }
     // 16\sol-1.html 소스 참고    
   </script>
 </body>
